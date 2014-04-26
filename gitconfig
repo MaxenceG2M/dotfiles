@@ -1,0 +1,22 @@
+[user]
+	name = Maxence G. de Montauzan
+	email = maxence@gdemontauzan.fr
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[alias]
+	st = status
+	stp = status -s
+	ci = commit
+	co = checkout
+	br = branch
+	lg = log --oneline
+	unstage = reset HEAD
+	reinit = reset --hard HEAD
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
