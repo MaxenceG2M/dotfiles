@@ -16,7 +16,12 @@
 	lg = log --oneline
 	unstage = reset HEAD
 	reinit = reset --hard HEAD
+	pr = pull --rebase
 
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+	pager = less -erX
+
+[help]
+	autocorrect = 1

@@ -97,5 +97,5 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-eval `dircolors /home/budd/.ls_colors`
+eval `dircolors ~/.ls_colors`
 
