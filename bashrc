@@ -124,4 +124,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # colorisation de la console perso
-eval `dircolors /home/budd/.ls_colors`
+eval `dircolors ~/.ls_colors`
