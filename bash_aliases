@@ -33,7 +33,8 @@ alias todone-view='~/sh-todo/todone-view'
 
 #Dropox Status
 alias dst='dropbox status'
-alias dfst='dropbox filestatus'
+#alias dfst='dropbox filestatus'
+alias dfst='dropbox filestatus | grep 'syncing''
 
 # Development
 alias gccComp='gcc -Wall -Werror -ansi -pedantic'
