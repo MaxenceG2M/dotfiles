@@ -51,6 +51,7 @@ alias gst='git status'
 alias glg='git lg'
 alias gdf='git diff'
 alias gdiff='git diff'
+alias gitk='gitk --all'
 
 # Miscellaneous
 alias grepJavaR='grep -r --include "*java"'
@@ -67,3 +68,8 @@ alias -g M='| more'
 alias -g L='| less'
 alias -g T='| tail'
 alias -g H='| head'
+alias -g WL='| wc -l'
+
+# SVN Alias
+alias -g C='| colordiff'
+alias svndiff='svn diff C L'
