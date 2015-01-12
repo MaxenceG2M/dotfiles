@@ -102,3 +102,4 @@ export PATH=$PATH:~/Software/bin
 eval `dircolors ~/.ls_colors`
 
 export SVN_EDITOR=vim
+bindkey \^U backward-kill-line
