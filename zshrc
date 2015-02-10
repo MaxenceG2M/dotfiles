@@ -103,3 +103,7 @@ eval `dircolors ~/.ls_colors`
 
 export SVN_EDITOR=vim
 bindkey \^U backward-kill-line
+
+# Convert non-breaking space to space.
+# source : https://github.com/hugues/zdotdir/blob/master/80_KeyBindings.zsh
+bindkey -s "\M-B\M- " " "

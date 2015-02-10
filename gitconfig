@@ -13,12 +13,13 @@
 	ci = commit
 	co = checkout
 	br = branch
-	lg = log --oneline
+	lg = log --oneline --graph
 	unstage = reset HEAD
 	reinit = reset --hard HEAD
 	pr = pull --rebase
 	graphlog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 # git log --graph --oneline --all
+	diffc = diff --cached
 
 [core]
 	editor = vim
