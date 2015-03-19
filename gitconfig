@@ -21,13 +21,16 @@
 	diffc = diff --cached
 	amend = commit --amend
 	undo = reset --soft HEAD^
+	undoh = reset --hard HEAD^
 	who = shortlog -nse
 
 	stp = status -sb
 	dc = diff --cached
-	ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --all --graph  # pretty one-line log with tags, branches and authors
-	lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --numstat    # a verbose ls, shows changed files too
+	ls = log --pretty=format:'%C(yellow)%h %C(cyan)%ar%C(red)%d %C(reset)%s %C(green)[%cN] %C(blue)(%ad)%C(reset)' --decorate --date=short --all --graph  # pretty one-line log with tags, branches and authors
+	lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cN]%C(reset)' --decorate --date=short --numstat    # a verbose ls, shows changed files too
 	# fup = log --since '1 day ago' --oneline --author <YOUR_EMAIL>	# I know what you did yesterday - great for follow-ups
+
+	alias = config --get-regexp alias
 
 
 [core]
