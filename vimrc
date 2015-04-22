@@ -51,12 +51,23 @@ set number
 set shiftwidth=4
 set tabstop=4
 
+if (v:version >= 703)
+	" Doesn't run with a vim < 7.3 ?
+	set relativenumber
+	" Mapping to toggle relativenumber
+	nnoremap <silent>  :set relativenumber!<cr>
+	" To test relativenumber, I installed vim 4. I supposed it break my backspace
+	" habitual behavior. Interesting behavior !
+	set backspace=start,eol
+endif
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
-"if &t_Co > 2 || has("gui_running")
-"  syntax on
-"  set hlsearch
-"endif
+if &t_Co > 2 || has("gui_running")
+  set hlsearch
+  :let mapleader = ","
+  nnoremap <leader><space> :nohlsearch<CR>
+endif
 
 " Use zsh-like autocompletion menu
 set wildmenu
@@ -67,3 +78,18 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+cmap w!! w !sudo tee % >/dev/null
+
+" disable the arrow keys while in normal mode
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+" disable the arrow keys while in insert mode
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+" movement by screen line instead of file line
+nnoremap j gj
+nnoremap k gk
