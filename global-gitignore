@@ -42,8 +42,8 @@ Thumbs.db
 .settings/
 .classpath
 # Francois discussion
-#*.iml
-#.project
+*.iml
+.project
 
 ##############
 # Java files #

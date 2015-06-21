@@ -128,3 +128,5 @@ fi
 
 # colorisation de la console perso
 eval `dircolors ~/.ls_colors`
+
+export LESS="-X"

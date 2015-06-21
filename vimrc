@@ -50,6 +50,8 @@ set mouse=a		" Enable mouse usage (all modes)
 set number
 set shiftwidth=4
 set tabstop=4
+set background=dark
+set nowrap
 
 if (v:version >= 703)
 	" Doesn't run with a vim < 7.3 ?
