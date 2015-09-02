@@ -108,4 +108,4 @@ bindkey \^U backward-kill-line
 # source : https://github.com/hugues/zdotdir/blob/master/80_KeyBindings.zsh
 bindkey -s "\M-B\M- " " "
 
-export LESS="-X"
+export LESS="-rX"

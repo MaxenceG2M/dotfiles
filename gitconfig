@@ -32,6 +32,8 @@
 
 	alias = config --get-regexp alias
 
+	list-file = log --pretty=format: --name-only --diff-filter=A
+
 
 [core]
 	editor = vim
