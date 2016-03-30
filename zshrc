@@ -82,6 +82,9 @@ if [ -f ~/env/env.source ]; then
     source ~/env/env.source
 fi
 
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}◒ "
+
 # Prompt conf (adapt return array)
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 RPROMPT='$(_vi_status)%{$(echotc UP 1)%}$(_git_time_since_commit) $(git_prompt_status)%{$reset_color%}%{$(echotc DO 1)%}'
