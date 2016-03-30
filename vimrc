@@ -49,6 +49,7 @@ set showcmd		" Show (partial) command in status line.
 set mouse=a		" Enable mouse usage (all modes)
 set number
 set shiftwidth=4
+set expandtab
 set tabstop=4
 set background=dark
 set nowrap

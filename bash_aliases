@@ -47,6 +47,10 @@ alias glg='git lg'
 alias gdf='git diff'
 alias gdiff='git diff'
 
+# Maven Alias
+alias mcp='mvn clean package'
+alias mci='mvn clean install'
+
 # Miscellaneous
 alias grepJavaR='grep -r --include "*java"'
 alias grepC='grep --color=always'
@@ -54,6 +58,8 @@ alias emacss='emacs -nw'
 
 alias wotgobblemem='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -r -n -k 6 | head -15'
 alias wotgobbleproc='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -r -n -k 5 | head -15'
+
+alias extractTgz='find . -name \*.t\*gz -exec tar xvf {} \;'
 
 function cdls { cd "$@" && ls;}
 function cdll { cd "$@" && ll;}

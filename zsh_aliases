@@ -52,10 +52,19 @@ alias gdf='git diff'
 alias gdiff='git diff'
 alias gitk='gitk --all'
 
+# SVN Alias
+alias -g C='| colordiff'
+alias svndiff='svn diff C L'
+
+# Maven Alias
+alias mcp='mvn clean package'
+alias mci='mvn clean install'
+
 # Miscellaneous
 alias grepJavaR='grep -r --include "*java"'
 alias grepC='grep --color=always'
 alias emacss='emacs -nw'
+alias bat='upower -i /org/freedesktop/UPower/devices/DisplayDevice'
 
 alias wotgobblemem='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -r -n -k 6 | head -15'
 alias wotgobbleproc='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -r -n -k 5 | head -15'
@@ -69,7 +78,4 @@ alias -g T='| tail'
 alias -g H='| head'
 alias -g WL='| wc -l'
 
-# SVN Alias
-alias -g C='| colordiff'
-alias svndiff='svn diff C L'
-alias bat='upower -i /org/freedesktop/UPower/devices/DisplayDevice'
+alias extractTgz='find . -name \*.t\*gz -exec tar xvf {} \;'
