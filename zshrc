@@ -86,7 +86,7 @@ fi
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 RPROMPT='$(_vi_status)%{$(echotc UP 1)%}$(_git_time_since_commit) $(git_prompt_status)%{$reset_color%}%{$(echotc DO 1)%}'
 # Git prompt configuration
-export PS1='$ %{$fg_bold[blue]%}[%*]%{$fg_bold[green]%}%p %{$fg[magenta]%}%n@%M %{$fg[cyan]%}%72<...<%~%<< %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}
+export PS1='%{$fg_bold[blue]%}[%*]%{$fg_bold[green]%}%p %{$fg[magenta]%}%n@%M %{$fg[cyan]%}%72<...<%~%<< %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}
 ${ret_status}%{$reset_color%}'
 
 if [ -d $HOME/.rvm/bin ]; then
