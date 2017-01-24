@@ -60,20 +60,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}# \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0;32m\]`__git_ps1`\[\033[00m\]\n\$ '
-	#Original Prompt
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-	#Original Prompt
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    PS_ONELINE='${debian_chroot:+($debian_chroot)}\u@\h[`cat /proc/loadavg | sed "s/ /\//g" | cut -d "/" -f 1-3`]:\w`__git_ps1`\$ '
-	PS_MUTLILINE='${debian_chroot:+($debian_chroot)}# \u@\h [`cat /proc/loadavg | sed "s/ /\//g" | cut -d "/" -f 1-3`]:\w`__git_ps1`\n$ '
-	PS_MUTLILINE='${debian_chroot:+($debian_chroot)}# \u@\h[\t]:\w`__git_ps1`\n$ '
-    PS_ORIG='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# git
+source /etc/bash_completion.d/git-prompt
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM="verbose"
 
-	PS1=$PS_MUTLILINE
-fi
+
+export PS1='\[\033]0;\w\007
+\033[36m\]\u \[\033[33m\w\033[0m\] \[\033[0;32m\]\W$(__git_ps1 " \[\033[0;31m\](%s)") \[\033[37m\t\033[0m\]
+$ '
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
