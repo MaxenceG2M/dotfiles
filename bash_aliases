@@ -22,7 +22,7 @@ alias promptMultiLine='export PS1=$PS_MUTLILINE'
 # Program
 alias monitor=gnome-system-monitor
 alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
-alias iconvutf8='iconv -f Latin1 -t UTF-8 ' 
+alias iconvutf8='iconv -f Latin1 -t UTF-8 '
 alias bd=". bd -s"
 
 #Todo Program
@@ -52,8 +52,9 @@ alias mcp='mvn clean package'
 alias mci='mvn clean install'
 
 # Miscellaneous
-alias grepJavaR='grep -r --include "*java"'
+alias grepJavaR='grep -R --include "*.java"'
 alias grepC='grep --color=always'
+alias grepTs='grep -R --include "*.ts"'
 alias emacss='emacs -nw'
 
 alias wotgobblemem='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -r -n -k 6 | head -15'
@@ -63,3 +64,13 @@ alias extractTgz='find . -name \*.t\*gz -exec tar xvf {} \;'
 
 function cdls { cd "$@" && ls;}
 function cdll { cd "$@" && ll;}
+
+dockerRemoveImages() {
+    docker rmi $(docker images | grep $1 | awk '{print $3}')
+}
+
+dockerStopAndRm() {
+    docker stop $1 && docker rm $1
+}
+
+alias ni='nice -n 19 ionice -c3'
