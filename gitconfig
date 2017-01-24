@@ -39,8 +39,13 @@
 	editor = vim
 	excludesfile = ~/.gitignore
     pager = less -eRXF
+	quotepath = false
 
 [help]
 	autocorrect = 1
 [push]
 	default = current
+[url "https://github.com/"]
+	insteadOf = git:://github.com
+[diff]
+	tool = meld
