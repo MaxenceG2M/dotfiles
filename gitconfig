@@ -11,6 +11,7 @@
 	st = status
 	ci = commit
 	co = checkout
+    cp = cherry-pick
 	br = branch
 	lg = log --oneline --graph --decorate		# oneline = "--pretty=oneline --abbrev-commit"
 	lga = log --oneline --graph --decorate --all 
