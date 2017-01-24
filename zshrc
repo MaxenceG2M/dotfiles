@@ -89,7 +89,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}◒ "
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 RPROMPT='$(_vi_status)%{$(echotc UP 1)%}$(_git_time_since_commit) $(git_prompt_status)%{$reset_color%}%{$(echotc DO 1)%}'
 # Git prompt configuration
-export PS1='%{$fg_bold[blue]%}[%*]%{$fg_bold[green]%}%p %{$fg[magenta]%}%n@%M %{$fg[cyan]%}%72<...<%~%<< %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}
+export PS1='%{$fg[yellow]%}[%*]%{$fg_no_bold[green]%}%p %{$fg[cyan]%}%72<...<%~%<< %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$fg[red]%}$(if [ ! -z $DOCKER_HOST ]; then echo "ANOTHER DOCKER HOST"; fi) % %{$reset_color%}
 ${ret_status}%{$reset_color%}'
 
 if [ -d $HOME/.rvm/bin ]; then
