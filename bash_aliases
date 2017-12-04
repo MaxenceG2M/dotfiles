@@ -24,6 +24,10 @@ alias monitor=gnome-system-monitor
 alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias iconvutf8='iconv -f Latin1 -t UTF-8 '
 alias bd=". bd -s"
+## Improved compression
+# http://sebsauvage.net/wiki/doku.php?id=linux-vrac
+alias gzip='pigz'
+alias bzip2='pbzip2'
 
 #Todo Program
 alias todo='~/sh-todo/todo'

@@ -14,7 +14,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=2500
-HISTFILESIZE=5000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -47,7 +47,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -130,3 +130,6 @@ fi
 eval `dircolors ~/.ls_colors`
 
 export LESS="-rX"
+
+export GOROOT=$HOME/Software/go
+export PATH=$PATH:$GOROOT/bin

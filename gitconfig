@@ -14,7 +14,7 @@
     cp = cherry-pick
 	br = branch
 	lg = log --oneline --graph --decorate		# oneline = "--pretty=oneline --abbrev-commit"
-	lga = log --oneline --graph --decorate --all 
+	lga = log --oneline --graph --decorate --all
 	unstage = reset HEAD
 	reinit = reset --hard HEAD
 	pr = pull --rebase
@@ -39,7 +39,8 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
-    pager = less -eRXF
+	pager = less -eRXF
+	autocrlf = input
 
 [help]
 	autocorrect = 1
