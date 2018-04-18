@@ -131,5 +131,3 @@ eval `dircolors ~/.ls_colors`
 
 export LESS="-rX"
 
-export GOROOT=$HOME/Software/go
-export PATH=$PATH:$GOROOT/bin

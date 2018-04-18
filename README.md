@@ -17,6 +17,7 @@ Run these commands :
     ln -s ~/dotfiles/zsh_aliases ~/.zsh_aliases
     ln -s ~/dotfiles/zshrc ~/.zshrc
 	ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+	ln -s ~/dotfiles/profile ~/.profile
 
 Change default bash :
 
