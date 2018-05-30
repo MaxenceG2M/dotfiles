@@ -85,9 +85,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Export PATH to add my bin folder
-export PATH=$PATH:~/Software/bin
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -131,3 +128,8 @@ eval `dircolors ~/.ls_colors`
 
 export LESS="-rX"
 
+# Export PATH to add my bin folder
+export PATH=$PATH:~/Software/bin
+
+# Export PATH to add shell-functools https://github.com/sharkdp/shell-functools
+export PATH=$PATH:~/Software/shell-functools/ft

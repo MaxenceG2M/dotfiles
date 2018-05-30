@@ -90,3 +90,10 @@ dockerStopAndRm() {
 }
 
 alias ni='nice -n 19 ionice -c3'
+
+alias dockerPort='docker ps --format "{{.Names}}, {{.Ports}}" | sed "s#\(0.0.0.0\):\([0-9]\+\)->\([0-9]\+\)/...#\3 http://127.0.0.1:\2#g;s#,#\n#g"'
+
+# Need dropbox_uploader https://github.com/andreafabrizi/Dropbox-Uploader
+function db_upload { dropbox_uploader upload $1 $1 }
+
+alias k='kubectl'

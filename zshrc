@@ -47,7 +47,7 @@ HISTCONTROL=ignoreboth
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump mvn)
+plugins=(git autojump mvn ng)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,11 +96,16 @@ if [ -d $HOME/.rvm/bin ]; then
     PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
+# TODO include bash_aliases
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+# Export PATH to add my bin folder
 export PATH=$PATH:~/Software/bin
+
+# Export PATH to add shell-functools https://github.com/sharkdp/shell-functools
+export PATH=$PATH:~/Software/shell-functools/ft
 
 eval `dircolors ~/.ls_colors`
 
@@ -112,3 +117,5 @@ bindkey \^U backward-kill-line
 bindkey -s "\M-B\M- " " "
 
 export LESS="-XF"
+source /home/groupevsc.com/maxence_germain/Software/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/groupevsc.com/maxence_germain/Software/aws-cli-latest/bin/aws_zsh_completer.sh

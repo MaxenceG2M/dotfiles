@@ -78,3 +78,5 @@ dockerStopAndRm() {
 }
 
 alias ni='nice -n 19 ionice -c3'
+
+alias k='kubectl'
