@@ -14,3 +14,5 @@ set completion-ignore-case on
 # Convert non-breaking space to space.
 # source : https://github.com/tobinjt/dotfiles/blob/master/.inputrc
 "\xC2\xA0": " "
+
+set bell-style none
