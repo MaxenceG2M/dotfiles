@@ -30,7 +30,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 #This is for show details with the current branch name in the promp
@@ -61,7 +61,12 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}# \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0;32m\]`__git_ps1`\[\033[00m\]\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}# \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0;32m\]`__git_ps1`\[\033[00m\]\n'
+    PS1+="\$(if [ \$? == 0 ]; then echo '\[\e[0;32m\]\$\[\033[00m\]'; else echo '\[\e[0;31m\]\$\[\033[00m\]'; fi) "
+    # To color exist status:
+    #   https://wiki.archlinux.org/index.php/Bash/Prompt_customization
+    #   https://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
+
 	#Original Prompt
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
