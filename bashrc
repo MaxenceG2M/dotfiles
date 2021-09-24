@@ -138,3 +138,7 @@ export PATH=$PATH:~/Software/bin
 
 # Export PATH to add shell-functools https://github.com/sharkdp/shell-functools
 export PATH=$PATH:~/Software/shell-functools/ft
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
