@@ -24,16 +24,16 @@ alias monitor=gnome-system-monitor
 alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias iconvutf8='iconv -f Latin1 -t UTF-8 '
 alias bd=". bd -s"
+alias k='kubectl'
+alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
+alias lg='lazygit'
+
+type bat >/dev/null 2>&1 && alias cat='bat --paging=never'
+
 ## Improved compression
 # http://sebsauvage.net/wiki/doku.php?id=linux-vrac
 alias gzip='pigz'
 alias bzip2='pbzip2'
-
-#Todo Program
-alias todo='~/sh-todo/todo'
-alias todone='~/sh-todo/todone'
-alias todone-archive='~/sh-todo/todone-archive'
-alias todone-view='~/sh-todo/todone-view'
 
 #Dropox Status
 alias dst='dropbox status'
@@ -60,12 +60,13 @@ alias grepJavaR='grep -R --include "*.java"'
 alias grepC='grep --color=always'
 alias grepTs='grep -R --include "*.ts"'
 alias emacss='emacs -nw'
+alias ni='nice -n 19 ionice -c3'
+alias tarx='find . -name \*.t\*gz -exec tar xvf {} \;'
 
 alias wotgobblemem='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -r -n -k 6 | head -15'
 alias wotgobbleproc='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -r -n -k 5 | head -15'
 
-alias extractTgz='find . -name \*.t\*gz -exec tar xvf {} \;'
-
+# cd improvment
 function cdls { cd "$@" && ls;}
 function cdll { cd "$@" && ll;}
 
@@ -83,4 +84,4 @@ alias k='kubectl'
 alias sl='sl -e'
 alias lg='lazygit'
 
-alias cat='bat --paging=never'
+alias elsIndices='http "localhost:9200/_cat/indices?v&s=index"'
