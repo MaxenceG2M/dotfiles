@@ -52,3 +52,11 @@ Thumbs.db
 target/
 *.class
 .svn/
+
+################
+# Python files #
+################
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
