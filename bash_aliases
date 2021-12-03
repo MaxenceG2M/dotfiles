@@ -80,3 +80,5 @@ dockerStopAndRm() {
 alias ni='nice -n 19 ionice -c3'
 
 alias k='kubectl'
+alias sl='sl -e'
+alias lg='lazygit'
