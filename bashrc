@@ -147,4 +147,4 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-eval "$(starship init bash)"
+[ -x /usr/local/bin/starship ] && eval "$(starship init bash)"
