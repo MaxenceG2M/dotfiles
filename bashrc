@@ -142,10 +142,9 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -x /usr/local/bin/starship ] && eval "$(starship init bash)"
 
-[ -f ~/.forgit.sh ] && source ~/.forgit.sh
-
-[ -f ~/.z.sh ] && source ~/.z.sh
+[ -f $SOFTWARE_BIN_PATH/z.sh ] && . $SOFTWARE_BIN_PATH/z.sh
 
 # To be loaded last once everything is loaded
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.fzf_custom ] && source ~/.fzf_custom
+[ -f $SOFTWARE_BIN_PATH/forgit.sh ] && . $SOFTWARE_BIN_PATH/forgit.sh
