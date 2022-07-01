@@ -28,7 +28,7 @@ alias k='kubectl'
 alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
 alias lg='lazygit'
 
-[ -x $(command -v bat) ] && alias cat='bat --paging=never'
+[ -x "$(command -v bat)" ] && alias cat='bat --paging=never'
 
 ## Improved compression
 # http://sebsauvage.net/wiki/doku.php?id=linux-vrac

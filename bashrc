@@ -108,9 +108,10 @@ fi
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+# Export PATH to add my bin folder
+# Do it before alias to eval command
+export SOFTWARE_BIN_PATH=~/Software/bin
+export PATH=$PATH:$SOFTWARE_BIN_PATH
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -133,17 +134,11 @@ eval `dircolors ~/.ls_colors`
 
 export LESS="-rX"
 
-# Export PATH to add my bin folder
-export PATH=$PATH:~/Software/bin
-
-# Export PATH to add shell-functools https://github.com/sharkdp/shell-functools
-export PATH=$PATH:~/Software/shell-functools/ft
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+[ -x "$(command -v bat)" ] && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
