@@ -85,3 +85,15 @@ alias sl='sl -e'
 alias lg='lazygit'
 
 alias elsIndices='http "localhost:9200/_cat/indices?v&s=index"'
+
+if [ -x ~/Software/bin/exa ]; then
+    alias lr='exa -R'
+    alias llr='exa -R'
+    alias ll='ls -lF'
+    alias ll='exa -l -g --icons'
+    alias le='exa --sort=extension'
+    alias lle='ll --sort=extension'
+    alias lt='exa --sort=time'
+    alias llt='ll --sort=time'
+    alias llf='exa -alrShF'
+fi
