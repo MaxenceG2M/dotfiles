@@ -19,6 +19,7 @@ Run these commands :
     ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     ln -s ~/dotfiles/profile ~/.profile
     ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
+    ln -s ~/dotfiles/fzf.bash ~/.fzf.bash
 
 Change default bash :
 
@@ -30,6 +31,10 @@ edit [path]/.oh-my-zsh/lib/key-bindings.zsh and comment part for Page Down key
 Thanks to PingTimeout :-)
 
 # Tools used
+* fzf
+    * https://github.com/junegunn/fzf
+    * ==> See readme
+    * fzf bash is linked to profile name, so I can't put it in the dotfile repo
 * forgit
     * https://github.com/wfxr/forgit
     * git clone https://github.com/wfxr/forgit.git ~/Software/forgit
@@ -38,3 +43,5 @@ Thanks to PingTimeout :-)
     * https://github.com/rupa/z
     * git clone https://github.com/rupa/z.git ~/Software/z
     * ln -s ~/Software/z/z.sh ~/.z.sh
+* ghq
+    * https://github.com/x-motemen/ghq
