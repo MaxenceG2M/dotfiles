@@ -28,3 +28,13 @@ Restore Page down do tild :
 edit [path]/.oh-my-zsh/lib/key-bindings.zsh and comment part for Page Down key
 
 Thanks to PingTimeout :-)
+
+# Tools used
+* forgit
+    * https://github.com/wfxr/forgit
+    * git clone https://github.com/wfxr/forgit.git ~/Software/forgit
+    * ln -s ~/Software/z/z.sh ~/.z.sh
+* z
+    * https://github.com/rupa/z
+    * git clone https://github.com/rupa/z.git ~/Software/z
+    * ln -s ~/Software/z/z.sh ~/.z.sh

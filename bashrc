@@ -143,3 +143,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -x /usr/local/bin/starship ] && eval "$(starship init bash)"
+
+[ -f ~/.forgit.sh ] && source ~/.forgit.sh
+
+[ -f ~/.z.sh ] && source ~/.z.sh
