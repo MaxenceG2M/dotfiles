@@ -1,0 +1,24 @@
+# FZF options
+export FZF_COMPLETION_OPTS='--border --info=inline'
+[ -x ~/Software/bin/exa ] && export FZF_ALT_C_OPTS="--preview 'exa --tree --level=2 {} | head -200'"
+[ -x "$(command -v tree)" ] && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
+# Custom fuzzy completion for "z" command
+#   e.g. z **<TAB>
+_fzf_complete_z() {
+    _fzf_complete --multi --reverse --preview 'exa --tree --level=2 {} | head -200' --prompt="z> " -- "$@" < <(
+        z -l | sort -nr | sed 's/^[0-9,.]* *//'
+    )
+}
+[ -n "$BASH" ] && complete -F _fzf_complete_z -o default -o bashdefault z
+
+function fzf-repo() {
+local selected_file=$(ghq list --full-path | fzf --query "$LBUFFER" --preview 'bat -l md --color=always {}/README.* | head -200')
+    if [ -n "$selected_file" ]; then
+        if [ -t 1 ]; then
+            echo ${selected_file}
+            cd ${selected_file}
+        fi
+    fi
+}
+bind -x '"\C-g": fzf-repo'

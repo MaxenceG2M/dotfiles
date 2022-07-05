@@ -140,10 +140,12 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -x "$(command -v bat)" ] && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 [ -x /usr/local/bin/starship ] && eval "$(starship init bash)"
 
 [ -f ~/.forgit.sh ] && source ~/.forgit.sh
 
 [ -f ~/.z.sh ] && source ~/.z.sh
+
+# To be loaded last once everything is loaded
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf_custom ] && source ~/.fzf_custom

@@ -97,16 +97,3 @@ if [ -x ~/Software/bin/exa ]; then
     alias llt='ll --sort=time'
     alias llf='exa -alrShF'
 fi
-
-if [ -f ~/.fzf.bash ]; then
-    function fzf-repo() {
-    local selected_file=$(ghq list --full-path | fzf --query "$LBUFFER")
-        if [ -n "$selected_file" ]; then
-            if [ -t 1 ]; then
-                echo ${selected_file}
-                cd ${selected_file}
-            fi
-        fi
-    }
-    bind -x '"\C-g": fzf-repo'
-fi

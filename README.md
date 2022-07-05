@@ -19,7 +19,7 @@ Run these commands :
     ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     ln -s ~/dotfiles/profile ~/.profile
     ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
-    ln -s ~/dotfiles/fzf.bash ~/.fzf.bash
+    ln -s ~/dotfiles/fzf_custom ~/.fzf_custom
 
 Change default bash :
 
