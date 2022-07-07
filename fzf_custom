@@ -12,12 +12,18 @@ _fzf_complete_z() {
 }
 [ -n "$BASH" ] && complete -F _fzf_complete_z -o default -o bashdefault z
 
+export FZF_GHQ_OPTS="--preview 'cat \$(find {} -iname readme*) | head -200'"
+[ -x "$(command -v bat)" ] && export FZF_GHQ_OPTS="--preview 'bat -l md --color=always \$(find {} -iname readme*) | head -200'"
+[ -x "$(command -v glow)" ] && export FZF_GHQ_OPTS="--preview 'glow -s dark \$(find {} -iname readme*) | head -200'"
+
 function fzf-repo() {
-local selected_file=$(ghq list --full-path | fzf --query "$LBUFFER" --preview 'bat -l md --color=always {}/README.* | head -200')
-    if [ -n "$selected_file" ]; then
+    cmd="ghq list --full-path | fzf --query \"$LBUFFER\" $FZF_GHQ_OPTS"
+    # local selected_repo=$(ghq list --full-path | fzf --query "$LBUFFER" --preview 'glow -s dark $(find {} -iname readme*) | head -200')
+    local selected_repo=$(eval $cmd)
+    if [ -n "$selected_repo" ]; then
         if [ -t 1 ]; then
-            echo ${selected_file}
-            cd ${selected_file}
+            echo ${selected_repo}
+            cd ${selected_repo}
         fi
     fi
 }
