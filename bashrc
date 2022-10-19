@@ -111,7 +111,7 @@ alias l='ls -CF'
 # Export PATH to add my bin folder
 # Do it before alias to eval command
 export SOFTWARE_BIN_PATH=~/Software/bin
-export PATH=$PATH:$SOFTWARE_BIN_PATH
+export PATH=$PATH:$SOFTWARE_BIN_PATH:~/.local/bin
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
