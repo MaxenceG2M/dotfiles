@@ -2,7 +2,6 @@ add_newline = true
 format = "${custom.dotfile}$all"
 
 [python]
-format = "[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style)"
 symbol = " "
 
 [directory]
