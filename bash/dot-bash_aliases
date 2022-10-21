@@ -27,7 +27,13 @@ alias iconvutf8='iconv -f Latin1 -t UTF-8 '
 alias bd=". bd -s"
 alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
 alias lg='lazygit'
+alias ld='lazydocker'
+
+# Kubernetes
 alias k='kubectl' #s Load completion for this alias in bashrc
+alias kx='kubectx'
+alias ke='kubens'
+alias kens='kubens'
 alias helmfile='helmfile -i'
 
 [ -x "$(command -v bat)" ] && alias cat='bat --paging=never'
@@ -69,7 +75,6 @@ alias grepC='grep --color=always'
 alias grepTs='grep -R --include "*.ts"'
 alias emacss='emacs -nw'
 alias tarx='find . -name \*.t\*gz -exec tar xvf {} \;'
-alias elsIndices='http "localhost:9200/_cat/indices?v&s=index"'
 
 # System
 alias ni='nice -n 19 ionice -c3'
@@ -85,14 +90,6 @@ alias 'conf_starship'='vim ~/.config/starship.toml'
 function cdls { cd "$@" && ls;}
 function cdll { cd "$@" && ll;}
 
-dockerRemoveImages() {
-    docker rmi $(docker images | grep $1 | awk '{print $3}')
-}
-
-dockerStopAndRm() {
-    docker stop $1 && docker rm $1
-}
-
 if [ -x ~/Software/bin/eza ]; then
     alias lr='eza -R'
     alias llr='eza -RlF'
@@ -103,3 +100,9 @@ if [ -x ~/Software/bin/eza ]; then
     alias lt='eza --sort=time'
     alias llt='ll --sort=time'
 fi
+
+# Funny things...
+alias poule='aplay ~/workspace/ghq/github.com/codzy-ds/git-poule/resources/chicken.wav 2> /dev/null &'
+
+# Docker
+. ~/.bash_docker_aliases

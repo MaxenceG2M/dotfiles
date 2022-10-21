@@ -1,0 +1,95 @@
+############################################################################
+#                                                                          #
+#               ------- Useful Docker Aliases --------                     #
+#                                                                          #
+# FORK AND ADAPTATION OF                                                   #
+#  https://gist.github.com/jgrodziski/9ed4a17709baad10dbcd4530b60dfcbb     #
+#                                                                          #
+#     # Usage:                                                             #
+#     dex <container>: execute a bash shell inside the RUNNING <container> #
+#     drun <image>   : execute a bash shell in NEW container from <image>  #
+#     di <container> : docker inspect <container>                          #
+#     dim            : docker images                                       #
+#     dip            : IP addresses of all running containers              #
+#     dl <container> : docker logs -f <container>                          #
+#     dnames         : names of all running containers                     #
+#     dps            : docker ps                                           #
+#     dpsa           : docker ps -a                                        #
+#     drmc           : remove all exited containers                        #
+#     drmid          : remove all dangling images                          #
+#     dsp            : remove all unused images                            #
+#     drmi <string>  : remove all image with <string> in name                #
+#     dsr <container>: stop then remove <container>                        #
+#     dc             : docker compose                                      #
+#     dcps           : docker compose                                      #
+#     dup            : docker compose up                                   #
+#     dcu            : docker compose up -d                                #
+#     dcd            : docker compose down                                 #
+#     dcr            : docker compose run                                  #
+#                                                                          #
+############################################################################
+
+function docker-ip-fn {
+    echo "IP addresses of all named running containers"
+
+    for DOC in `dnames-fn`
+    do
+        IP=`docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}' "$DOC"`
+        OUT+=$DOC'\t'$IP'\n'
+    done
+    echo -e $OUT | column -t
+    unset OUT
+}
+
+function docker-exec-fn {
+	docker exec -it $1 ${2:-bash}
+}
+
+function docker-run-fn {
+	docker run --rm -it --entrypoint ${2:-bash} $1
+}
+
+function docker-stop-remove-fn {
+	docker stop $1;docker rm $1
+}
+
+function docker-rm-exited-container-fn {
+    docker rm $(docker ps --all -q -f status=exited)
+}
+
+function docker-rm-image-fn {
+    docker rmi $(docker images | grep $1 | awk '{print $3}')
+}
+
+function docker-rm-dangling-images-fn {
+    imgs=$(docker images -q -f dangling=true)
+    [ ! -z "$imgs" ] && docker rmi "$imgs" || echo "no dangling images."
+}
+
+# in order to do things like dex $(dlab label) sh
+function dlab {
+    docker ps --filter="label=$1" --format="{{.ID}}"
+}
+
+alias dex=docker-exec-fn    # docker exec $1 $2
+alias drun=docker-run-fn    # docker run $1 $2
+alias dip=docker-ip-fn      # docker ip address of all running containers
+
+alias dis="docker inspect"
+alias dim="docker images"
+alias dlo="docker logs -f"
+
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias drmc=docker-rm-exited-container-fn
+alias drmid=docker-rm-dangling-images-fn
+alias dsp="docker system prune --all"
+alias drmi=docker-rm-image-fn
+alias dsr=docker-stop-remove-fn    # docker stop rm
+alias dc="docker compose"
+alias dcps="docker compose ps"
+alias dup="docker compose up"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+alias dcl="docker compose logs"
+alias dcr="docker compose run"
