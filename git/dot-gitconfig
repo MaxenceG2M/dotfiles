@@ -115,3 +115,6 @@
 	s = series
 	sr = series -r
 	stack = series -rOP
+
+[includeIf "gitdir:~/workspace/ghq/gitea.gdemontauzan.fr/"]
+	path = ~/dotfiles/git/gitconfig-perso
