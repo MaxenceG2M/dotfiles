@@ -24,3 +24,7 @@ fi
 export GOROOT=$HOME/Software/go
 export PATH=$PATH:$GOROOT/bin
 
+
+if [ -e /home/maxenceg2m/.nix-profile/etc/profile.d/nix.sh ]; then . /home/maxenceg2m/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+# Need to install nixpkgs.nix-bash-completions
+export XDG_DATA_DIRS="$HOME/.nix-profile/share/:$XDG_DATA_DIRS"

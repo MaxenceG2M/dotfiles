@@ -119,3 +119,5 @@ bindkey -s "\M-B\M- " " "
 export LESS="-XF"
 source /home/groupevsc.com/maxence_germain/Software/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/groupevsc.com/maxence_germain/Software/aws-cli-latest/bin/aws_zsh_completer.sh
+
+if [ -e /home/maxenceg2m/.nix-profile/etc/profile.d/nix.sh ]; then . /home/maxenceg2m/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

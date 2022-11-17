@@ -42,6 +42,10 @@ disabled = false
 format = '[\[$time\]]($style) '
 style = 'cyan dimmed'
 
+[nix_shell]
+format = 'in [$symbol$state( \($name\))]($style) '
+symbol = " "
+
 [custom.dotfile]
 when = """ ! ~/dotfiles/git_repo_stats.sh ~/dotfiles/"""
 format = "[$symbol($output)]($style) "
