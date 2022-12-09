@@ -54,8 +54,8 @@ alias gdf='git diff'
 alias gdiff='git diff'
 
 # Maven Alias
-alias mcp='mvn clean package'
-alias mci='mvn clean install'
+alias mcp='mvn -B clean package'
+alias mci='mvn -B clean install'
 
 # Miscellaneous
 alias dotfiles='cd ~/dotfiles'

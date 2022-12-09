@@ -35,8 +35,10 @@
 	alias = config --get-regexp alias
 
 	list-file = log --pretty=format: --name-only --diff-filter=A
-    stat = diff --stat # Show diff stats with a branch
-	force= push --force-with-lease
+	stat = diff --stat # Show diff stats with a branch
+	force = push --force-with-lease
+	fetcha = fetch --all
+	rprune = remote prune
 
 [core]
 	editor = vim
@@ -67,6 +69,7 @@
 	log = delta
 	reflog = delta
 	show = delta
+	blame = delta
 
 [interactive]
 	diffFilter = delta --color-only --features=interactive
