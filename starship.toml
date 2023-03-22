@@ -3,6 +3,7 @@ format = "${custom.dotfile}$all"
 
 [python]
 symbol = " "
+format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [directory]
 repo_root_style = 'bold green'
