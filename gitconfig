@@ -39,6 +39,9 @@
 	force = push --force-with-lease
 	fetcha = fetch --all
 	rprune = remote prune
+	fix = commit --no-edit --amend
+	# https://blog.oddbit.com/post/2016-02-19-a-collection-of-git-tips/
+	changed = show --name-only
 
 [core]
 	editor = vim
