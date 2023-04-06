@@ -101,3 +101,9 @@
 
 [ghq]
 	root = ~/workspace/ghq
+
+[stgit "alias"]
+	r = refresh
+	s = series
+	sr = series -r
+	stack = series -rOP
