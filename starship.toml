@@ -1,5 +1,5 @@
 add_newline = true
-format = "${custom.dotfile}$all"
+format = "${custom.dotfile}${custom.tldr}$all"
 
 [python]
 symbol = " "
@@ -51,4 +51,11 @@ when = """ ! ~/dotfiles/git_repo_stats.sh ~/dotfiles/"""
 format = "[$symbol($output)]($style) "
 description = "Symbol to warn that the dotfiles repo is not clean or fully synchronised. Use a custom script to check status of repo."
 symbol = ""
+style = "bold red"
+
+[custom.tldr]
+when = """ ! ~/dotfiles/git_repo_stats.sh ~/tldr/"""
+format = "[$symbol($output)]($style) "
+description = "Symbol to warn that the dotfiles repo is not clean or fully synchronised. Use a custom script to check status of repo."
+symbol = ""
 style = "bold red"
