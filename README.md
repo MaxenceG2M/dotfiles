@@ -43,6 +43,8 @@ Thanks to PingTimeout to introduce me the dotfiles concept :-)
     * https://github.com/ogham/exa/
 * rg (ripgrep)
     * https://github.com/BurntSushi/ripgrep
+* tldr (tealdeer)
+    * https://github.com/dbrgn/tealdeer (rust implementation)
 * z
     * https://github.com/rupa/z
     * git clone https://github.com/rupa/z.git ~/Software/z
