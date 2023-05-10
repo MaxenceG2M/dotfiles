@@ -45,7 +45,7 @@
 
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore-global
 	pager = less -eRXF
 	autocrlf = input
 
