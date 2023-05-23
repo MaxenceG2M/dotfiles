@@ -16,6 +16,19 @@ $ make install
 
 Target could be overided with `make install TARGET=<target_path>`
 
+### tldr custom pages
+
+This repo have a disabled submodule for custom tldr pages.
+The idea is to have this dependancy to make links for tealdeer and in home.
+I want to edit tldr custom pages in a totally separate workflow, so the submodule is disabled and live his life separatly.
+
+For a fresh clone, do:
+
+```sh
+git submodule init
+git submodule update
+```
+
 ## Other informations
 
 Change default bash :

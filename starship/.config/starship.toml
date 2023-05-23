@@ -54,7 +54,7 @@ symbol = ""
 style = "bold red"
 
 [custom.tldr]
-when = """ ! ~/dotfiles/git_repo_stats.sh ~/tldr/"""
+when = """ ! ~/dotfiles/git_repo_stats.sh ~/tldr-custom-pages/"""
 format = "[$symbol($output)]($style) "
 description = "Symbol to warn that the dotfiles repo is not clean or fully synchronised. Use a custom script to check status of repo."
 symbol = ""
