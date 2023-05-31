@@ -8,6 +8,8 @@
 	branch = auto
 
 [alias]
+	alias = config --get-regexp alias
+
 	st = status
 	ci = commit
 	co = checkout
@@ -18,30 +20,30 @@
 	unstage = reset HEAD
 	reinit = reset --hard HEAD
 	pr = pull --rebase
-	graphlog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	diffc = diff --cached
 	amend = commit --amend
 	undo = reset --soft HEAD^
 	undoh = reset --hard HEAD^
 	who = shortlog -nse
 
-	stp = status -sb
+	sts = status -sb
 	dc = diff --cached
 	ls = log --pretty=format:'%C(yellow)%h %C(cyan)%ar%C(red)%d %C(reset)%s %C(green)[%cN] %C(blue)(%ad)%C(reset)' --decorate --date=short --graph  # pretty one-line log with tags, branches and authors
 	lsa = log --pretty=format:'%C(yellow)%h %C(cyan)%ar%C(red)%d %C(reset)%s %C(green)[%cN] %C(blue)(%ad)%C(reset)' --decorate --date=short --all --graph  # pretty one-line log with tags, branches and authors
 	lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cN]%C(reset)' --decorate --date=short --numstat    # a verbose ls, shows changed files too
-	# fup = log --since '1 day ago' --oneline --author <YOUR_EMAIL>	# I know what you did yesterday - great for follow-ups
 
-	alias = config --get-regexp alias
-
-	list-file = log --pretty=format: --name-only --diff-filter=A
-	stat = diff --stat # Show diff stats with a branch
 	force = push --force-with-lease
 	fetcha = fetch --all
 	rprune = remote prune
 	fix = commit --no-edit --amend
 	# https://blog.oddbit.com/post/2016-02-19-a-collection-of-git-tips/
-	changed = show --name-only
+	changed = show --name-only --oneline
+
+	# Not really used
+	graphlog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	# fup = log --since '1 day ago' --oneline --author <YOUR_EMAIL>	# I know what you did yesterday - great for follow-ups
+	list-file = log --pretty=format: --name-only --diff-filter=A
+	stat = diff --stat # Show diff stats with a branch
 
 [core]
 	editor = vim
