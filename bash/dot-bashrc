@@ -155,3 +155,9 @@ function prev() {
     PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
     sh -c "pet new `printf %q "$PREV"`"
 }
+
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
+
+source <(helm completion bash)
+source <(helmfile completion bash)
