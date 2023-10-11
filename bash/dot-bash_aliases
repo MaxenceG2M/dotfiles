@@ -48,7 +48,7 @@ alias gccThreadComp='gcc -Wall -Werror -ansi -pedantic -lpthread'
 alias gccOpenComp='gcc -Wall -Werror -ansi -pedantic -D_XOPEN_SOURCE -D_SVID_SOURCE'
 
 # Git
-alias gst='git status'
+alias gst='git status --short'
 alias glg='git lg'
 alias gdf='git diff'
 alias gdiff='git diff'

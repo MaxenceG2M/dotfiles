@@ -37,7 +37,11 @@
 	rprune = remote prune
 	fix = commit --no-edit --amend
 	# https://blog.oddbit.com/post/2016-02-19-a-collection-of-git-tips/
-	changed = show --name-only --oneline
+
+	last = log -1 --oneline --pretty=format:'%C(yellow)%h%C(auto)%d %C(reset)%s -- %C(cyan)%ar %Cgreen%cN%C(reset)'
+	last-changed = show --name-only --oneline
+	com = commit -m
+	branchv = branch -vv
 
 	# Not really used
 	graphlog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
