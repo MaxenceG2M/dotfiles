@@ -27,3 +27,22 @@ function fzf-repo() {
     fi
 }
 bind -x '"\C-g": fzf-repo'
+
+function fzf-kubectx() {
+    cmd="kubectx | fzf --query \"$LBUFFER\""
+    local selected_ctx=$(eval $cmd)
+    if [ -n "$selected_ctx" ]; then
+        if [ -t 1 ]; then
+            echo ${selected_ctx}
+            kubectx ${selected_ctx}
+        fi
+    fi
+}
+bind -x '"\C-k": fzf-kubectx'
+
+function de() {
+  local cid
+  cid=$(docker ps | sed 1d | fzf -1 -q "$1" | awk '{print $1}')
+
+  [ -n "$cid" ] && docker exec -ti "$cid" bash
+}
