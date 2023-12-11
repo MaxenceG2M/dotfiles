@@ -38,7 +38,7 @@
 	fix = commit --no-edit --amend
 	# https://blog.oddbit.com/post/2016-02-19-a-collection-of-git-tips/
 
-	last = log -1 --oneline --pretty=format:'%C(yellow)%h%C(auto)%d %C(reset)%s -- %C(cyan)%ar %Cgreen%cN%C(reset)'
+	last = log -1 --oneline --pretty=format:'%C(yellow)%h%C(auto)%d %C(reset)%s -- %C(cyan)%ar %Cgreen%aN%C(reset)'
 	last-changed = show --name-only --oneline
 	com = commit -m
 	branchv = branch -vv
@@ -86,6 +86,9 @@
 [delta]
 	features = decorations
 	line-numbers = true
+	plus-style = syntax "#003500"
+	plus-non-emph-style = syntax "#003500"
+	plus-emph-style = syntax bold "#00737D"
 
 [delta "interactive"]
 	keep-plus-minus-markers = false
