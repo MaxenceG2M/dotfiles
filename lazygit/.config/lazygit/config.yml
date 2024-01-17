@@ -1,0 +1,8 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --syntax-theme Coldark-Dark --paging=never --dark --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+os:
+  editPreset: 'vscode'
+services:
+  'gitea.gdemontauzan.fr': 'gitea:gitea.gdemontauzan.fr'
