@@ -50,14 +50,14 @@ style = 'bold bright-red'
 [custom.dotfile]
 when = """ ! ~/dotfiles/git_repo_stats.sh ~/dotfiles/"""
 format = "[$symbol($output)]($style) "
-description = "Symbol to warn that the dotfiles repo is not clean or fully synchronised. Use a custom script to check status of repo."
+description = "dotfiles repo is not clean or fully synchronised"
 symbol = ""
 style = "bold red"
 
 [custom.tldr]
 when = """ ! ~/dotfiles/git_repo_stats.sh ~/tldr-custom-pages/"""
 format = "[$symbol($output)]($style) "
-description = "Symbol to warn that the dotfiles repo is not clean or fully synchronised. Use a custom script to check status of repo."
+description = "tldr-custom-pages repo is not clean or fully synchronised"
 symbol = ""
 style = "bold red"
 
