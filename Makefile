@@ -1,4 +1,5 @@
-TARGET ?= ~
+TARGET   ?= ~
+WSL_SOFT ?= $(shell uname -a | grep -i wsl > /dev/null && echo "keychain")
 
 # Simulaton may reveal conflicts and block the installation.
 # This is on purpose.
