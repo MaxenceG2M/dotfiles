@@ -22,3 +22,4 @@ init-folder: # Init needed folder to avoid bad symlink creation
 basic-instal: # Install basic software and starship
 	sudo apt update && sudo apt install make stow $(KEYCHAIN)
 	curl -sS https://starship.rs/install.sh | sh
+	bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)

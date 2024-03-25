@@ -38,7 +38,7 @@ ZSH_THEME="avit"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -121,3 +121,6 @@ source /home/groupevsc.com/maxence_germain/Software/zsh-syntax-highlighting/zsh-
 source /home/groupevsc.com/maxence_germain/Software/aws-cli-latest/bin/aws_zsh_completer.sh
 
 if [ -e /home/maxenceg2m/.nix-profile/etc/profile.d/nix.sh ]; then . /home/maxenceg2m/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"

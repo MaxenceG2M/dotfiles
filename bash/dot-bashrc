@@ -156,6 +156,10 @@ function prev() {
     sh -c "pet new `printf %q "$PREV"`"
 }
 
+. "$HOME/.atuin/bin/env"
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
+
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 

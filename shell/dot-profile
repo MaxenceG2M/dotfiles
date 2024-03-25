@@ -29,3 +29,5 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
 fi # added by Nix installer, edited with HOME var
 
 export XDG_DATA_DIRS="$HOME/.nix-profile/share/:$XDG_DATA_DIRS"
+
+. "$HOME/.atuin/bin/env"
