@@ -18,6 +18,7 @@ always_show_remote = true
 [git_commit]
 commit_hash_length = 8
 style = "bold white"
+tag_disabled = false
 
 [git_status]
 ahead = "[⇡${count}](cyan)"
