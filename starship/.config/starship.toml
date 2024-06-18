@@ -1,5 +1,5 @@
 add_newline = true
-format = "${custom.dotfile}${custom.tldr}$all"
+format = "${custom.dotfile}${custom.tldr}$all${custom.kube-prod}"
 
 [python]
 symbol = " "
@@ -47,6 +47,16 @@ style = 'cyan dimmed'
 format = 'in [$symbol$state( \($name\))]($style) '
 symbol = " "
 style = 'bold bright-red'
+
+[gcloud]
+disabled = true
+
+[kubernetes]
+disabled = false
+style = "blue"
+contexts = [
+    { context_pattern = ".*prod.*", style = "bold red", symbol = " " }
+]
 
 [custom.dotfile]
 when = """ ! ~/dotfiles/git_repo_stats.sh ~/dotfiles/"""
