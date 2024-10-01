@@ -83,14 +83,16 @@
 	defaultBranch = main
 
 [pager]
-	diff = delta
-	log = delta
-	reflog = delta
-	show = delta
-	blame = delta
+	# Use GIT_PAGER env variable instead?
+	diff = "pre=$(which delta); ${pre:-less}"
+	log = "pre=$(which delta); ${pre:-less}"
+	reflog = "pre=$(which delta); ${pre:-less}"
+	show = "pre=$(which delta); ${pre:-less}"
+	blame = "pre=$(which delta); ${pre:-less}"
 
 [interactive]
-	diffFilter = delta --color-only --features=interactive
+	# TODO Fix this is delta isn't here
+	diffFilter = "pre=$(which delta); ${pre:-less} --color-only --features=interactive"
 
 [delta]
 	features = decorations

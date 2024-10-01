@@ -158,13 +158,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf_custom ] && source ~/.fzf_custom
 [ -f $SOFTWARE_BIN_PATH/forgit.sh ] && . $SOFTWARE_BIN_PATH/forgit.sh
 
-eval "$(thefuck --alias)"
+[ -x "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
 
 function prev() {
     PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
     sh -c "pet new `printf %q "$PREV"`"
 }
 
+# TODO How to handle if atuin isn't here? > Install atuin add there lines
 . "$HOME/.atuin/bin/env"
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 bind -r '\C-r' # Workaroud - https://github.com/atuinsh/atuin/issues/962#issuecomment-3454781155

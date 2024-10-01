@@ -1,5 +1,5 @@
 [submodule "tldr/tldr-custom-pages"]
 	path = tldr/tldr-custom-pages
-	url = git@github.com:MaxenceG2M/tldr-custom-pages.git
+	url = https://github.com/MaxenceG2M/tldr-custom-pages.git
 	active = false
 	branch = main
