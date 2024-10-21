@@ -124,3 +124,6 @@ if [ -e /home/maxenceg2m/.nix-profile/etc/profile.d/nix.sh ]; then . /home/maxen
 
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/maxenceg2m/Software/bin/mc mc

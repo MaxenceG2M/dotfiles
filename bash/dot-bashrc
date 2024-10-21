@@ -169,3 +169,5 @@ source <(helmfile completion bash)
 source <(kind completion bash)
 source <(minikube completion bash)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+complete -C /home/maxenceg2m/Software/bin/mc mc
