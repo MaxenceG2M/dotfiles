@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+prefix=$(cat $1 | grep -oP '\(\K[^\)]+' | tr '|' '\n')
+
+if [ -z $prefix ]; then
+    echo "no prefix; abort";
+    exit 2
+fi
+
+scope_file="scope.txt"
+scope_path=$(git rev-parse --git-path hooks)/$scope_file
+
+for x in ${prefix}
+do
+    if ! grep -q -w $x ${scope_path}; then
+        echo "'$x' is not a valid scope; abort";
+        exit 1
+    fi
+done

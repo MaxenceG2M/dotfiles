@@ -29,16 +29,20 @@ git submodule init
 git submodule update
 ```
 
+### Commit hook
+
+Do a `make git-hook` to set hook path to `.hook`.
+The `commit-msg` hook ensure that they have a good prefix on commit message.
+
 ## Other informations
 
-Change default bash :
+- Change default bash
 
     chsh
 
-Restore Page down do tild :
-edit [path]/.oh-my-zsh/lib/key-bindings.zsh and comment part for Page Down key
+- Restore "Page down" button do tild (`~`)
 
-Thanks to PingTimeout to introduce me the dotfiles concept :-)
+edit [path]/.oh-my-zsh/lib/key-bindings.zsh and comment part for Page Down key
 
 ## Tools used
 
@@ -67,3 +71,7 @@ Thanks to PingTimeout to introduce me the dotfiles concept :-)
     * https://github.com/wfxr/forgit
     * git clone https://github.com/wfxr/forgit.git ~/Software/forgit
     * ln -s ~/Software/z/z.sh ~/.z.sh
+
+---
+
+Thanks to PingTimeout to introduce me the dotfiles concept :-)

@@ -1,0 +1,12 @@
+aliases-bash    bash_aliases
+alias           bash_aliases
+aliases         bash_aliases
+bash            bashrc
+bashrs          bashrc
+git             gitconfig
+GLOBAL          global
+vim             vimrc
+zsh             zshrc
+staship         starship
+makefile        utils
+fzf_custom      fzf
