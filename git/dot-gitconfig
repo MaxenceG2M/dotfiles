@@ -49,6 +49,11 @@
 	list-file = log --pretty=format: --name-only --diff-filter=A
 	stat = diff --stat # Show diff stats with a branch
 
+	# difft
+	dlog = -c diff.external='difft' log --ext-diff
+	dshow = -c diff.external='difft' show --ext-diff
+	ddiff = -c diff.external='difft' diff
+
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore-global
