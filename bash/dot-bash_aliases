@@ -58,8 +58,10 @@ alias mcp='mvn -B clean package'
 alias mci='mvn -B clean install'
 
 # Python
-alias pvenv="python3 -m venv venv"
-alias pactivate="source ./venv/bin/activate"
+alias pyvenv="python3 -m venv venv"
+alias pyactivate="source ./venv/bin/activate"
+alias pyuvactivate="source ./.venv/bin/activate"
+alias pyactivateuv="source ./.venv/bin/activate"
 
 # Miscellaneous
 alias grepJavaR='grep -R --include "*.java"'
@@ -91,13 +93,13 @@ dockerStopAndRm() {
     docker stop $1 && docker rm $1
 }
 
-if [ -x ~/Software/bin/exa ]; then
-    alias lr='exa -R'
-    alias llr='exa -RlF'
-    alias ll='exa -l -g --icons --sort type'
-    alias lll='exa -alFg --icons --sort type'
-    alias le='exa --sort=extension'
+if [ -x ~/Software/bin/eza ]; then
+    alias lr='eza -R'
+    alias llr='eza -RlF'
+    alias ll='eza -lg --icons --sort type'
+    alias lll='eza -algF --icons --sort type'
+    alias le='eza --sort=extension'
     alias lle='ll --sort=extension'
-    alias lt='exa --sort=time'
+    alias lt='eza --sort=time'
     alias llt='ll --sort=time'
 fi

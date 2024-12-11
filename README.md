@@ -52,8 +52,9 @@ Thanks to PingTimeout to introduce me the dotfiles concept :-)
     * https://github.com/dandavison/delta
 * bat
     * https://github.com/sharkdp/bat
-* exa
-    * https://github.com/ogham/exa/
+* eza
+    * https://github.com/eza-community/eza
+    * eza is a (more) maintenaid fork of exa (https://github.com/ogham/exa/)
 * rg (ripgrep)
     * https://github.com/BurntSushi/ripgrep
 * tldr (tealdeer)

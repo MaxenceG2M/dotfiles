@@ -1,12 +1,12 @@
 # FZF options
 export FZF_COMPLETION_OPTS='--border --info=inline'
-[ -x ~/Software/bin/exa ] && export FZF_ALT_C_OPTS="--preview 'exa --tree --level=2 {} | head -200'"
+[ -x ~/Software/bin/eza ] && export FZF_ALT_C_OPTS="--preview 'eza --tree --level=2 {} | head -200'"
 [ -x "$(command -v tree)" ] && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 # Custom fuzzy completion for "z" command
 #   e.g. z **<TAB>
 _fzf_complete_z() {
-    _fzf_complete --multi --reverse --preview 'exa --tree --level=2 {} | head -200' --prompt="z> " -- "$@" < <(
+    _fzf_complete --multi --reverse --preview 'eza --tree --level=2 {} | head -200' --prompt="z> " -- "$@" < <(
         z -l | sort -nr | sed 's/^[0-9,.]* *//'
     )
 }
