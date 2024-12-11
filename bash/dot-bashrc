@@ -165,3 +165,7 @@ complete -o default -F __start_kubectl k
 
 source <(helm completion bash)
 source <(helmfile completion bash)
+
+source <(kind completion bash)
+source <(minikube completion bash)
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
