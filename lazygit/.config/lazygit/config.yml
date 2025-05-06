@@ -6,3 +6,6 @@ os:
   editPreset: 'vscode'
 services:
   'gitea.gdemontauzan.fr': 'gitea:gitea.gdemontauzan.fr'
+gui:
+  mainPanelSplitMode: vertical
+
