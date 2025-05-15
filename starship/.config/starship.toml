@@ -1,5 +1,5 @@
 add_newline = true
-format = "${custom.dotfile}${custom.tldr}$all${custom.kube-prod}"
+format = "${custom.dotfile}${custom.tldr}$all"
 
 [python]
 symbol = " "
@@ -40,7 +40,7 @@ disabled = false
 
 [time]
 disabled = false
-format = '[\[$time\]]($style) '
+format = '[$time]($style) '
 style = 'cyan dimmed'
 
 [nix_shell]
@@ -60,8 +60,11 @@ format = '[$ssh_symbol$hostname]($style)\] '
 [gcloud]
 disabled = true
 
+[package]
+format = ' [$symbol$version]($style) '
+
 [kubernetes]
-disabled = false
+disabled = true
 style = "blue"
 contexts = [
     { context_pattern = ".*prod.*", style = "bold red", symbol = " " }
