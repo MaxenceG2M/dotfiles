@@ -1,0 +1,11 @@
+[General]
+  SnippetFile = "~/.config/pet/snippet.toml"
+  Editor = "vim"
+  Column = 40
+  SelectCmd = "fzf --ansi --layout=reverse --border --height=90% --pointer=* --cycle --prompt=Snippets:"
+  Backend = "gist"
+  SortBy = "description"
+  Color = true
+  Cmd = []
+  Format = "[$description]: $command $tags"
+  SnippetDirs = []
