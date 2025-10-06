@@ -54,6 +54,10 @@
 	dshow = -c diff.external='difft' show --ext-diff
 	ddiff = -c diff.external='difft' diff
 
+	tag-v = tag --sort=v:refname
+	tags = tag --sort=v:refname
+
+
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore-global
