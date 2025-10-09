@@ -20,3 +20,6 @@ use_pager = false
 
 [updates]
 auto_update = false
+
+[search]
+languages = ["fr", "en"]
