@@ -158,6 +158,7 @@ function prev() {
 
 . "$HOME/.atuin/bin/env"
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+bind -r '\C-r' # Workaroud - https://github.com/atuinsh/atuin/issues/962#issuecomment-3454781155
 eval "$(atuin init bash --disable-up-arrow)"
 
 source <(kubectl completion bash)
