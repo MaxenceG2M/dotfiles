@@ -1,12 +1,19 @@
 TARGET ?= ~
 
+# Simulaton may reveal conflicts and block the installation.
+# This is on purpose.
+# Stow can "adopt" existing files, but this does not working correctly with stow < 2.4.0.
+# It's retrieve a ".bashrc" file alongside a "dot-bashrc" intact-file.
+# Since I don't do installation every day, I leave things as they are.
 simulate:
-	stow --dotfile -vnSt $(TARGET) */
+	stow --dotfile --no-folding --ignore=custom-pages -vnSt $(TARGET) */
+	stow --dotfile -vnSt $(TARGET) tldr
 	@echo
 	@echo Do make install do realize this operation
 
 install: submodule init-folder
-	stow --dotfile -vSt $(TARGET) */
+	stow --dotfile --no-folding --ignore=custom-pages -vSt $(TARGET) */
+	stow --dotfile -vSt $(TARGET) tldr
 
 uninstall:
 	stow --dotfile -vDt $(TARGET) */
