@@ -48,6 +48,15 @@ format = 'in [$symbol$state( \($name\))]($style) '
 symbol = " "
 style = 'bold bright-red'
 
+# SSH beautify
+[username]
+format = '\[[$user]($style) '
+disabled = true
+[hostname]
+style = 'bold green'
+ssh_symbol = '🌐'
+format = '[$ssh_symbol$hostname]($style)\] '
+
 [gcloud]
 disabled = true
 
